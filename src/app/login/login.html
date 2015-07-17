@@ -1,0 +1,49 @@
+<language-selector></language-selector>
+<div class="panel panel-default center-page login" ng-controller="loginController">
+  <div class="panel-heading">
+    <h3 class="panel-title" yi="login">login</h3>
+  </div>
+  <div class="panel-body">
+    <form name="form" autocomplete="off" novalidate>
+
+      <div class="form-group has-feedback" has-error="form.userName">
+        <input name="userName" type="text" class="form-control" required
+               yi-attr="{ placeholder: 'user_name'}"
+               placeholder="user name"
+               ng-model="userName" maxlength="35" ng-maxlength="35" autofocus>
+
+        <div ng-messages="form.userName.$error" ng-if="form.$submitted">
+          <div class="pts text-danger" ng-message="required">
+            <span>required</span>
+          </div>
+          <div class="pts text-danger" ng-message="maxlength">
+            <span res="validate.field_too_long" res-data-length="35"></span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-group" has-error="form.password">
+        <input name="password" type="password" class="form-control"
+               yi-attr="{ placeholder: 'password'}"
+               placeholder="password" required
+               ng-model="password" autocomplete="off" maxlength="35" ng-maxlength="35"
+          >
+
+        <div ng-messages="form.password.$error" ng-if="form.$submitted">
+          <div class="pts text-danger" ng-message="required">
+            <span res="validate.field_required"></span>
+          </div>
+          <div class="pts text-danger" ng-message="maxlength">
+            <span res="validate.field_too_long" res-data-length="35"></span>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-block"
+              ng-click="login()"
+        >login</button>
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+{
+  "login": "登录",
+  "user_name": "用户名",
+  "password": "密码",
+  "welcome": "欢迎使用DemoApp",
+  "warn_max_length": "最大长度是{maxlength}",
+  "message": "您好, {name}",
+  "countries": {
+    "us": "美国",
+    "ca": "加拿大",
+    "cn": "中国"
+  },
+  "you_select": "你选择了{choice}",
+  "nationality": "国籍"
+}

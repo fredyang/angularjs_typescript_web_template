@@ -1,0 +1,28 @@
+<language-selector></language-selector>
+
+<div ng-controller="tryoutController">
+  <h2><span yi="message" yi-data-name="{{name}}"></span> {{'welcome' | yi}}</h2>
+
+
+
+  <select class="form-control" ng-model="countryCode"
+
+          ng-options="code as name for (code, name) in countries">
+
+    <option yi="nationality"></option>
+  </select>
+
+  <br/>
+  <div class="alert alert-success" alert-change="countryCode|bounce" role="alert"
+       yi="you_select" yi-data-choice="{{countries[countryCode]}}"
+    >
+
+  </div>
+
+  <input maxlength="{{maxlength}}" yi-attr="{placeholder: 'warn_max_length'}" yi-data-maxlength="{{maxlength}}">
+  <input type="range" ng-model="maxlength">
+
+
+</div>
+
+

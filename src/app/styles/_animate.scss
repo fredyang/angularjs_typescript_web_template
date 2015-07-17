@@ -1,0 +1,185 @@
+// Animation class hook
+// Set the class name to trigger animations
+// Defaults to "animated"
+$AnimateHook: "animated";
+
+// Animation duration
+// Sets the hook's animation duration
+// Defaults to 1s
+$AnimateDuration: 0.5s;
+
+// BASE STYLES
+// ====================================
+//
+// Setting styles for the animation hook class
+
+.#{$AnimateHook} {
+  animation-duration: $AnimateDuration;
+  animation-fill-mode: both;
+
+  // Modifier for infinite repetition
+  &--infinite {
+    animation-iteration-count: infinite;
+  }
+
+}
+
+/////////////
+@keyframes flipInX {
+  0% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transition-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  100% {
+    transform: perspective(400px);
+  }
+}
+
+.flipInX {
+  backface-visibility: visible !important;
+  animation-name: flipInX;
+}
+
+////////////
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%, 43% {
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+  transform-origin: center bottom;
+}
+
+@keyframes dropdown {
+  0% {
+    transform: translate3d(0, -1000px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+
+  }
+}
+
+.dropdown {
+  animation-name: dropdown;
+}
+
+
+
+@keyframes floatup {
+
+  0% {
+    transform: translate3d(0, 0, 0);
+
+  }
+
+  100% {
+    transform: translate3d(0, -1000px, 0);
+  }
+}
+
+
+
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+  transform-origin: center bottom;
+}
+
+/* Yellow fade */
+.highlight{
+  -webkit-animation:yellow-fade 3s;
+  -moz-animation:yellow-fade 3s;
+  animation:yellow-fade 3s;
+}
+
+@-webkit-keyframes yellow-fade{
+  5%{ background-color:#ff8; }
+}
+
+@-moz-keyframes yellow-fade{
+  5%{ background-color:#ff8; }
+}
+
+@keyframes yellow-fade{
+  5%{ background-color:#ff8; }
+}

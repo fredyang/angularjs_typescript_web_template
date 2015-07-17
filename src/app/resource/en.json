@@ -1,0 +1,15 @@
+{
+  "login": "Login",
+  "user_name": "User name",
+  "password": "Password",
+  "welcome": "Welcome to DemoApp",
+  "warn_max_length": "maximum length is {maxlength}",
+  "message": "Hello, {name}",
+  "countries": {
+    "us": "USA",
+    "ca": "Canada",
+    "cn": "China"
+  },
+  "you_select": "You selected {choice}",
+  "nationality": "Nationality"
+}
